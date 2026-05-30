@@ -30,7 +30,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .fa-whatsapp{
+        .fa-whatsapp-main{
             position: fixed;
             font-size: 48px;
             z-index: 1000000;
