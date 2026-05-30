@@ -1171,3 +1171,31 @@ observeFadeElements();
 
 // في حال إضافة عناصر جديدة بعد تحميل الصفحة (مثل فلاتر أو تحميل المزيد)
 // يمكن استدعاء observeFadeElements() مرة أخرى
+// مراقبة التغييرات على class السلة باستخدام MutationObserver
+const cartSidebar = document.getElementById('cartSidebar');
+if (cartSidebar) {
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'class') {
+                handleCartSidebarState();
+            }
+        });
+    });
+    observer.observe(cartSidebar, { attributes: true });
+    // استدعاء أولي لتطبيق الحالة في حال كانت السلة مفتوحة بالفعل
+    handleCartSidebarState();
+}
+
+// تأكد من إغلاق السلة عند النقر على overlay وإعادة الحالة
+const cartOverlay = document.getElementById('cartOverlay');
+if (cartOverlay) {
+    cartOverlay.addEventListener('click', () => {
+        // عند إغلاق السلة، سيتم إزالة class open، والمُراقب سيتولى الباقي
+    });
+}
+const closeCartBtn = document.getElementById('closeCartBtn');
+if (closeCartBtn) {
+    closeCartBtn.addEventListener('click', () => {
+        // نفس الشيء، التغيير في class سيعيد الحالة
+    });
+}
