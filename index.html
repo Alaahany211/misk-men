@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Misk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css?v=1.1">
+</head>
+<body>
+    <div class="scroller"></div>
+<header>
+    <div class="container">
+        <div class="burger-countiner">
+            <div class="burger-icon"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#men">رجالي</a></li>
+            <li><a href="#women">حريمي</a></li>
+            <li><a href="#unisex">يونيسكس</a></li>
+            <li><a href="#custom">طلب خاص</a></li>
+            <li><a href="#footer">تواصل</a></li>
+        </ul>
+        <div class="logo">Misk</div>
+    </div>
+</header>
+
+<!-- زر السلة العائم -->
+<div class="floating-cart" id="floatingCartBtn">
+    <i class="fas fa-shopping-bag"></i>
+    <span class="cart-count" id="cartCount">0</span>
+</div>
+
+<main>
+    <section id="men" class="section"><div class="section-name"></div><div class="container products-grid" id="menProducts"></div></section>
+</main>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header"><h3><i class="fas fa-shopping-cart"></i> سلة التسوق</h3><button class="close-cart" id="closeCartBtn"><i class="fas fa-times"></i></button></div>
+    <div class="cart-items" id="cartItemsList"><div class="empty-cart">🛒 السلة فارغة</div></div>
+    <div class="cart-total">
+        <div class="total-line"><span>المجموع الكلي:</span><span id="cartTotalPrice">0 جنيه</span></div>
+        <button class="btn-checkout" id="checkoutWhatsappBtn"><i class="fab fa-whatsapp"></i> إتمام البيع</button>
+    </div>
+</div>
+
+<footer id="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4><i class="fas fa-store"></i> متجر Misk</h4>
+                <p><i class="fas fa-map-marker-alt"></i> مصر - القاهرة - مدينة المستقبل</p>
+                <p><i class="fas fa-phone-alt"></i> +20 123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> info@misk-perfumes.com</p>
+            </div>
+            <div class="footer-social"><h4>تابعنا</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div></div>
+        </div>
+        <div class="copyright">© 2025 Misk Perfumes. جميع الحقوق محفوظة.</div>
+    </div>
+</footer>
+<a target="_blank" title="Contact Us On WhatsApp" href="https://wa.me/+966535333417?text=مرحباً، أريد الاستفسار عن..." target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+<script src="javascript/cart-manager.js"></script>
+<script src="javascript/men.js"></script>
+
+</body>
+</html>
